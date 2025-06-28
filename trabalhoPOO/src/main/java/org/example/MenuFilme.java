@@ -8,7 +8,7 @@ public class MenuFilme {
 
         // Cria uma lista de títulos únicos de filmes
         Set<String> titulosUnicos = new HashSet<>();
-        for (SessaoService ss : todasSessoes) {
+        for (Sessao ss : todasSessoes) {
             titulosUnicos.add(ss.getTitulo());
         }
 
@@ -58,7 +58,7 @@ public class MenuFilme {
     }
 
     private void exibirInfo(String titulo, List<Sessao> todasSessoes) {
-        for (SessaoService ss : todasSessoes) {
+        for (Sessao ss : todasSessoes) {
             if (ss.getTitulo().equals(titulo)) {
                 ss.exibirInfo();
                 break;
@@ -78,7 +78,7 @@ public class MenuFilme {
         boolean encontrou = false;
         List<Sessao> sessoesFiltradas = new ArrayList<>();
 
-        for (SessaoService ss : todasSessoes) {
+        for (Sessao ss : todasSessoes) {
             if (ss.getTitulo().equals(titulo)) {
                 System.out.println("(" + indice + ") - Horário: " + ss.getHorario() + " | Sala: " + ss.getSala() + " | Preço: R$" + ss.getPreco());
                 sessoesFiltradas.add(ss);
